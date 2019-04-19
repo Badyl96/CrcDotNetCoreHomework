@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrcDotNetCoreHomeworkWebApi.Repository
 {
-    interface ILibraryRepository<TEntity>
+    public interface ILibraryRepository<TEntity>
     {
         Task<IEnumerable<TEntity>> GetAll();
 
