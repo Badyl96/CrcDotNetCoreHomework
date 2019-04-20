@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CrcDotNetCoreHomeworkWebApi.DbContexts;
+using CrcDotNetCoreHomeworkWebApi.Model;
+using CrcDotNetCoreHomeworkWebApi.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +34,8 @@ namespace CrcDotNetCoreHomeworkWebApi
 
 
             services.AddDbContext<LibraryContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<ILibraryRepository<Library>, LibraryRepository>();
 
             services.AddSwaggerGen(c =>
             {
