@@ -55,20 +55,5 @@ namespace CrcDotNetCoreHomeworkWebApi.UnitTests.Controllers
             Assert.Equal(404, response.StatusCode);
             Assert.Equal(expectedMessage, response.Value);
         }
-        /*
-        [Fact]
-        public async Task check_post_library_with_not_existing_parameters()
-        {
-
-            var repository = LibraryContextMocker.GetInMemoryLibraryRepository(nameof(check_post_library_with_not_existing_parameters));
-            var controller = new LibraryController(repository);
-            var expectedMessage = "Library is null";
-            Library library = null;
-            var response = await controller.Post(library) as ObjectResult;
-
-            Assert.Equal(404, response.StatusCode);
-            Assert.Equal(expectedMessage, response.Value);
-        }
-        */
     }
 }
