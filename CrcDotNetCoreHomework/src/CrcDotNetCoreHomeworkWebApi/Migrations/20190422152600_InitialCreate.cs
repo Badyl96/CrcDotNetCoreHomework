@@ -15,7 +15,7 @@ namespace CrcDotNetCoreHomeworkWebApi.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(nullable: false),
                     Author = table.Column<string>(nullable: false),
-                    Isbn = table.Column<string>(nullable: false),
+                    Isbn = table.Column<string>(maxLength: 13, nullable: false),
                     Year = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>

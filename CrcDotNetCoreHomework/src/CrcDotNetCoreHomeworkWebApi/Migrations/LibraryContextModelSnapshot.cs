@@ -25,7 +25,8 @@ namespace CrcDotNetCoreHomeworkWebApi.Migrations
                         .IsRequired();
 
                     b.Property<string>("Isbn")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(13);
 
                     b.Property<string>("Title")
                         .IsRequired();

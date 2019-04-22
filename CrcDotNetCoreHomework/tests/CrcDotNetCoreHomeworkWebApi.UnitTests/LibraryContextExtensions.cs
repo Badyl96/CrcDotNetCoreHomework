@@ -15,10 +15,10 @@ namespace CrcDotNetCoreHomeworkWebApi.UnitTests
                 new Library
                 {
                     Id = 1,
-                    Title = "Tytul 1",
-                    Author = "Autor 1",
-                    Isbn = "000001",
-                    Year = Convert.ToDateTime("2019/03/25 01:00:00 PM")
+                    Title = "Pan Tateusz",
+                    Author = "Adam Mickiewicz",
+                    Isbn = "9781296903633",
+                    Year = Convert.ToDateTime("2012/03/25 01:00:00 PM")
                 }
 
             );
@@ -28,10 +28,10 @@ namespace CrcDotNetCoreHomeworkWebApi.UnitTests
                 new Library
                 {
                      Id = 2,
-                     Title = "Tytul 2",
-                     Author = "Autor 1",
-                     Isbn = "000002",
-                     Year = Convert.ToDateTime("2019/03/25 01:00:00 PM")
+                     Title = "Konrad Wallenrod",
+                     Author = "Adam Mickiewicz",
+                     Isbn = "781296903634",
+                     Year = Convert.ToDateTime("2013/03/25 05:15:15 PM")
                 }
 
              );
@@ -41,10 +41,10 @@ namespace CrcDotNetCoreHomeworkWebApi.UnitTests
                  new Library
                  {
                      Id = 3,
-                     Title = "Tytul 3",
-                     Author = "Autor 1",
-                     Isbn = "000003",
-                     Year = Convert.ToDateTime("2019/03/25 01:00:00 PM")
+                     Title = "Ender na wygnaniu",
+                     Author = "Orson Scott Card",
+                     Isbn = "781296903639",
+                     Year = Convert.ToDateTime("2013/09/10 12:36:00 AM")
                  }
 
             );
@@ -54,10 +54,10 @@ namespace CrcDotNetCoreHomeworkWebApi.UnitTests
                   new Library
                   {
                       Id = 4,
-                      Title = "Tytul 4",
-                      Author = "Autor 1",
-                      Isbn = "000004",
-                      Year = Convert.ToDateTime("2019/03/25 01:00:00 PM")
+                      Title = "Antygona",
+                      Author = "Sofokles",
+                      Isbn = "781096903639",
+                      Year = Convert.ToDateTime("2010/03/25 15:10:00 PM")
                   }
 
              );
@@ -67,10 +67,10 @@ namespace CrcDotNetCoreHomeworkWebApi.UnitTests
                   new Library
                   {
                       Id = 5,
-                      Title = "Tytul 5",
-                      Author = "Autor 1",
-                      Isbn = "000005",
-                      Year = Convert.ToDateTime("2019/03/25 01:00:00 PM")
+                      Title = "Makbet",
+                      Author = "William Shakespeare",
+                      Isbn = "781096903633",
+                      Year = Convert.ToDateTime("2011/03/25 01:00:00 PM")
                   }
 
              );

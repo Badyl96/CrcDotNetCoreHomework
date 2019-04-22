@@ -29,7 +29,7 @@ namespace CrcDotNetCoreHomeworkWebApi.UnitTests.Controllers
         {
             var repository = LibraryContextMocker.GetInMemoryLibraryRepository(nameof(get_library_with_existing_id));
             var controller = new LibraryController(repository);
-            var exceptedValue = "Title 1";
+            var exceptedValue = "Pan Tateusz";
 
             var response = await controller.Get(1) as ObjectResult;
             var libraries = response.Value as Library;
@@ -38,5 +38,37 @@ namespace CrcDotNetCoreHomeworkWebApi.UnitTests.Controllers
             Assert.Equal(exceptedValue, libraries.Title);
 
         }
+        
+
+        [Fact]
+        public async Task get_library_with_not_existing_id()
+        {
+       
+            var repository = LibraryContextMocker.GetInMemoryLibraryRepository(nameof(get_library_with_not_existing_id));
+            var controller = new LibraryController(repository);
+            var expectedMessage = "The library record couldn't be found";
+
+         
+            var response = await controller.Get(10) as ObjectResult;
+
+          
+            Assert.Equal(404, response.StatusCode);
+            Assert.Equal(expectedMessage, response.Value);
+        }
+        /*
+        [Fact]
+        public async Task check_post_library_with_not_existing_parameters()
+        {
+
+            var repository = LibraryContextMocker.GetInMemoryLibraryRepository(nameof(check_post_library_with_not_existing_parameters));
+            var controller = new LibraryController(repository);
+            var expectedMessage = "Library is null";
+            Library library = null;
+            var response = await controller.Post(library) as ObjectResult;
+
+            Assert.Equal(404, response.StatusCode);
+            Assert.Equal(expectedMessage, response.Value);
+        }
+        */
     }
 }

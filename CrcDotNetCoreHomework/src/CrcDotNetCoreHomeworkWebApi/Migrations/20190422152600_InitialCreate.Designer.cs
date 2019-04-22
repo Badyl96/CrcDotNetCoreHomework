@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrcDotNetCoreHomeworkWebApi.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    [Migration("20190419201200_InitialCreate")]
+    [Migration("20190422152600_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,7 +27,8 @@ namespace CrcDotNetCoreHomeworkWebApi.Migrations
                         .IsRequired();
 
                     b.Property<string>("Isbn")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasMaxLength(13);
 
                     b.Property<string>("Title")
                         .IsRequired();
