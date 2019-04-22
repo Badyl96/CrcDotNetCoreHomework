@@ -20,6 +20,7 @@ namespace CrcDotNetCoreHomeworkWebApi.Model
         public string Author { get; set; }
 
         [Required]
+        [MaxLength(13,ErrorMessage = "Isbn cannot be greater than 13"),MinLength(13, ErrorMessage = "Isbn cannot be less than 13")]
         public string Isbn { get; set; }
 
         [Required]
